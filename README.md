@@ -30,3 +30,4 @@
         stages: [merge-commit, push, manual]  
         always_run: true
 ```
+
