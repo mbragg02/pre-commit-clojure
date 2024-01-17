@@ -6,11 +6,9 @@ then
     exit 2
 fi
 
-result=$(cljstyle $1)
-
-if [ -z "$result" ]; then
-    exit 0;
-else
-    echo $result
-    exit 1;
+if !(cljstyle $1)
+then
+    echo
+    echo "Error: new cljstyle errors found. Please fix them and retry the commit."
+    exit 1
 fi
