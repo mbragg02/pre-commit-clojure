@@ -11,9 +11,6 @@ len=${#array[@]}
 _action=${1}
 _files=${array[@]:1:$len}
 
-echo $_action
-echo $_files
-
 if !(cljstyle $_action $_files)
 then
     echo
