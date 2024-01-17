@@ -21,3 +21,11 @@
   language: script
   pass_filenames: false
   require_serial: false
+- id: cljstyle
+  name: run cljstyle
+  description: Format files using cljstyle
+  types: [clojure]
+  entry: hooks/cljstyle-pre-commit
+  language: script
+  pass_filenames: false
+  require_serial: false

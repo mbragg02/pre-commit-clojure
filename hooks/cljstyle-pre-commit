@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+if ! command -v cljstyle &> /dev/null
+then
+    echo "cljstyle could not be found. Please follow the installation instructions here https://github.com/greglook/cljstyle#installation"
+    exit 2
+fi
+
+result=$(cljstyle check)
+
+if [ -z "$result" ]; then
+    exit 0;
+else
+    echo $result
+    exit 1;
+fi
