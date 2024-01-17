@@ -27,6 +27,5 @@
   types: [clojure]
   entry: hooks/cljstyle-pre-commit
   language: script
-  pass_filenames: false
   require_serial: false
   args: ["check"]
