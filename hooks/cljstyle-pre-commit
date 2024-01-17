@@ -6,7 +6,7 @@ then
     exit 2
 fi
 
-result=$(cljstyle check)
+result=$(cljstyle $1)
 
 if [ -z "$result" ]; then
     exit 0;
